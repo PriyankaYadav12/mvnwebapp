@@ -33,10 +33,9 @@
 		  <scope>test</scope>
 	  </dependency>
   </dependencies>
+  
   <build>
-    <finalName>mvnwebapp</finalName>
-  </build>
-  <build>
+	  
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
