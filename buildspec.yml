@@ -1,17 +1,37 @@
 version: 0.2
-os: linux
+
+phases:
+
+install:
+
+runtime-versions:
+
+java: corretto8
+
+pre_build:
+
+commands:
+
+- echo In the pre_build phase...
+
+build:
+
+commands:
+
+- echo Build started on1 `date`
+
+- mvn test
+
+post_build:
+
+commands:
+
+- echo Build complete on1 `date`
+
+- mvn package
+
+artifacts:
+
 files:
-  - source: /index.html
-    destination: /var/www/html/
-hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
+
+- target/mvnwebapp.war
