@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17
+      java: corretto11
     commands:
       - echo Nothing to do in the install phase
   pre_build:
@@ -19,5 +19,5 @@ phases:
 artifacts:
   files:
     - buildspec.yml
-    - 'target/mvnwebapp.war'
+    - 'target/mvnwebapp.jar'
     
