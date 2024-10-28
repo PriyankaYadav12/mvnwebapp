@@ -2,9 +2,9 @@ FROM openjdk:11-jdk-slim
 
 WORKDIR /app
 
-COPY target/*.jar /app/mvnwebapp.jar
+COPY target/*.war /app/mvnwebapp.war
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "mvnwebapp.jar"]
+ENTRYPOINT ["java", "-jar", "mvnwebapp.war"]
 
